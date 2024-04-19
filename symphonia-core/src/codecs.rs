@@ -228,6 +228,56 @@ pub const CODEC_TYPE_ALAC: CodecType = CodecType(0x2003);
 /// True Audio (TTA)
 pub const CODEC_TYPE_TTA: CodecType = CodecType(0x2004);
 
+// Video codecs
+// ------------
+
+/// Microsoft (TM) Video Codec Manager (VCM)
+pub const CODEC_TYPE_VCM: CodecType = CodecType(0x3000);
+/// Video, raw uncompressed video frames
+pub const CODEC_TYPE_VIDEO_UNCOMPRESSED: CodecType = CodecType(0x3001);
+/// MPEG4 ISO simple profile (DivX4)
+pub const CODEC_TYPE_MPEG4_ISO_SP: CodecType = CodecType(0x3002);
+/// MPEG4 ISO advanced simple profile (DivX5, XviD, FFMPEG)
+pub const CODEC_TYPE_MPEG4_ISO_ASP: CodecType = CodecType(0x3003);
+/// MPEG4 ISO advanced profile
+pub const CODEC_TYPE_MPEG4_ISO_AP: CodecType = CodecType(0x3004);
+/// Microsoft (TM) MPEG4 V3
+pub const CODEC_TYPE_MPEG4_MS_V3: CodecType = CodecType(0x3005);
+/// MPEG 1
+pub const CODEC_TYPE_MPEG1: CodecType = CodecType(0x3006);
+/// MPEG 2
+pub const CODEC_TYPE_MPEG2: CodecType = CodecType(0x3007);
+/// AVC/H.264
+pub const CODEC_TYPE_MPEG4_ISO_AVC: CodecType = CodecType(0x3008);
+/// HEVC/H.265
+pub const CODEC_TYPE_MPEGH_ISO_HEVC: CodecType = CodecType(0x3009);
+/// AVS2-P2/IEEE.1857.4
+pub const CODEC_TYPE_AVS2: CodecType = CodecType(0x300a);
+/// AVS3-P2/IEEE.1857.10
+pub const CODEC_TYPE_AVS3: CodecType = CodecType(0x300b);
+/// RealVideo 1.0 aka RealVideo 5
+pub const CODEC_TYPE_RV10: CodecType = CodecType(0x300c);
+/// RealVideo G2 and RealVideo G2+SVT
+pub const CODEC_TYPE_RV20: CodecType = CodecType(0x300d);
+/// RealVideo 8
+pub const CODEC_TYPE_RV30: CodecType = CodecType(0x300e);
+/// RealVideo 9
+pub const CODEC_TYPE_RV40: CodecType = CodecType(0x300f);
+/// Video taken from QuickTime(TM) files
+pub const CODEC_TYPE_QUICKTIME: CodecType = CodecType(0x3010);
+/// Theora
+pub const CODEC_TYPE_THEORA: CodecType = CodecType(0x3011);
+/// Apple ProRes
+pub const CODEC_TYPE_PRORES: CodecType = CodecType(0x3012);
+/// VP8 Codec format
+pub const CODEC_TYPE_VP8: CodecType = CodecType(0x3013);
+/// VP9 Codec format
+pub const CODEC_TYPE_VP9: CodecType = CodecType(0x3014);
+/// AOMedia Video 1
+pub const CODEC_TYPE_AV1: CodecType = CodecType(0x3015);
+/// FF Video Codec 1
+pub const CODEC_TYPE_FFV1: CodecType = CodecType(0x3016);
+
 /// A method and expected value to perform verification on the decoded audio.
 #[derive(Copy, Clone, Debug)]
 pub enum VerificationCheck {

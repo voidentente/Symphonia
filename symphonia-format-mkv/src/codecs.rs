@@ -40,6 +40,31 @@ pub(crate) fn codec_id_to_type(track: &TrackElement) -> Option<CodecType> {
             64 => Some(codecs::CODEC_TYPE_PCM_F64LE),
             _ => None,
         },
+
+        "V_MS/VFW/FOURCC" => Some(codecs::CODEC_TYPE_VCM),
+        "V_UNCOMPRESSED" => Some(codecs::CODEC_TYPE_VIDEO_UNCOMPRESSED),
+        "V_MPEG4/ISO/SP" => Some(codecs::CODEC_TYPE_MPEG4_ISO_SP),
+        "V_MPEG4/ISO/ASP" => Some(codecs::CODEC_TYPE_MPEG4_ISO_ASP),
+        "V_MPEG4/ISO/AP" => Some(codecs::CODEC_TYPE_MPEG4_ISO_AP),
+        "V_MPEG4/MS/V3" => Some(codecs::CODEC_TYPE_MPEG4_MS_V3),
+        "V_MPEG1" => Some(codecs::CODEC_TYPE_MPEG1),
+        "V_MPEG2" => Some(codecs::CODEC_TYPE_MPEG2),
+        "V_MPEG4/ISO/AVC" => Some(codecs::CODEC_TYPE_MPEG4_ISO_AVC),
+        "V_MPEGH/ISO/HEVC" => Some(codecs::CODEC_TYPE_MPEGH_ISO_HEVC),
+        "V_AVS2" => Some(codecs::CODEC_TYPE_AVS2),
+        "V_AVS3" => Some(codecs::CODEC_TYPE_AVS3),
+        "V_REAL/RV10" => Some(codecs::CODEC_TYPE_RV10),
+        "V_REAL/RV20" => Some(codecs::CODEC_TYPE_RV20),
+        "V_REAL/RV30" => Some(codecs::CODEC_TYPE_RV30),
+        "V_REAL/RV40" => Some(codecs::CODEC_TYPE_RV40),
+        "V_QUICKTIME" => Some(codecs::CODEC_TYPE_QUICKTIME),
+        "V_THEORA" => Some(codecs::CODEC_TYPE_THEORA),
+        "V_PRORES" => Some(codecs::CODEC_TYPE_PRORES),
+        "V_VP8" => Some(codecs::CODEC_TYPE_VP8),
+        "V_VP9" => Some(codecs::CODEC_TYPE_VP9),
+        "V_AV1" => Some(codecs::CODEC_TYPE_AV1),
+        "V_FFV1" => Some(codecs::CODEC_TYPE_FFV1),
+
         _ => {
             log::info!("unknown codec: {}", &track.codec_id);
             None

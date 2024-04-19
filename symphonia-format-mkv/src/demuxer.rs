@@ -464,6 +464,10 @@ impl FormatReader for MkvReader {
                 codec_params.with_n_frames(duration as u64);
             }
 
+            if let Some(codec_type) = codec_type {
+                codec_params.for_codec(codec_type);
+            }
+
             if let Some(audio) = track.audio {
                 codec_params.with_sample_rate(audio.sampling_frequency.round() as u32);
 
@@ -484,7 +488,6 @@ impl FormatReader for MkvReader {
                 }
 
                 if let Some(codec_type) = codec_type {
-                    codec_params.for_codec(codec_type);
                     if let Some(codec_private) = track.codec_private {
                         let extra_data = match codec_type {
                             CODEC_TYPE_VORBIS => {
